@@ -15,6 +15,14 @@
       "category": "Alimentação",
       "price": 50,
       "createdAt": "2022-11-11T23:16:29.874Z"
+    },
+    {
+      "Id": 3,
+      "description": "Monetização YouTube",
+      "type": "income",
+      "category": "venda",
+      "price": 3600,
+      "createdAt": "2022-11-13T19:27:22.968Z"
     }
   ]
 }
