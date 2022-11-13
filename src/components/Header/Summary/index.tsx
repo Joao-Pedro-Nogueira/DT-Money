@@ -4,30 +4,13 @@ import { useTheme } from "styled-components";
 import { useContext } from "react";
 import { TransactionsContext } from "../../../contexts/TransactionsContext";
 import { priceFormatter } from "../../../utils/formatter";
+import { useSummary } from "../../../hooks/useSummary";
 
 export function Summary() {
   
   const theme = useTheme()
 
-  const { transactions } = useContext(TransactionsContext)
-
-  const incomeTransactions = transactions.filter((transactions) => {
-    return transactions.type === 'income'
-  } )
-
-  const totalIncomePrice = incomeTransactions.reduce((accumulator, incomeTransaction ) => {
-    return accumulator + incomeTransaction.price
-  }, 0)
-
-  const outcomeTransactions = transactions.filter((transactions) => {
-    return transactions.type === 'outcome'
-  })
-
-  const totalOutcomePrice = outcomeTransactions.reduce((accumulator, outcome) => {
-    return accumulator + outcome.price
-  },0)
-
-  const totalResultPrice = totalIncomePrice - totalOutcomePrice
+  const summary = useSummary()
 
   return(
     <SummaryContainer className="container">
@@ -36,21 +19,21 @@ export function Summary() {
           <span>Entradas</span>
           <ArrowCircleUp size={23} color={theme["green-300"]} />
         </header>
-        <span>{priceFormatter.format(totalIncomePrice)}</span>
+        <span>{priceFormatter.format(summary.income)}</span>
       </SummaryCard>
       <SummaryCard>
         <header>
           <span>Saídas</span>
           <ArrowCircleDown size={23} color={theme["red-300"]} />
         </header>
-        <span>{priceFormatter.format(totalOutcomePrice)}</span>
+        <span>{priceFormatter.format(summary.outcome)}</span>
       </SummaryCard>
       <SummaryCard variant="green">
         <header>
           <span>Total</span>
           <CurrencyDollar size={23} color={theme["white"]} />
         </header>
-        <span>{priceFormatter.format(totalResultPrice)}</span>
+        <span>{priceFormatter.format(summary.total)}</span>
       </SummaryCard>
     </SummaryContainer>
   )
