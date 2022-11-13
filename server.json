@@ -5,7 +5,7 @@
       "description": "Desenvolvimento de site",
       "type": "income",
       "category": "venda",
-      "price": 14750,
+      "price": 14000,
       "createdAt": "2022-11-11T18:14:52.984Z"
     },
     {
@@ -21,8 +21,24 @@
       "description": "Monetização YouTube",
       "type": "income",
       "category": "venda",
-      "price": 3600,
+      "price": 3650,
       "createdAt": "2022-11-13T19:27:22.968Z"
+    },
+    {
+      "Id": 2,
+      "description": "Compra do mês de novembro",
+      "type": "outcome",
+      "category": "Mercado",
+      "price": 342,
+      "createdAt": "2022-11-12T09:30:09.654Z"
+    },
+    {
+      "Id": 2,
+      "description": "Aluguel",
+      "type": "outcome",
+      "category": "Transporte",
+      "price": 2500,
+      "createdAt": "2022-11-11T23:16:29.874Z"
     }
   ]
 }
