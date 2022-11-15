@@ -4,14 +4,14 @@ import { useTheme } from 'styled-components';
 import { CloseButton, Content, Overlay, TransactionType, TransactionTypeButton } from './styles';
 import * as RadioGroup from '@radix-ui/react-radio-group';
 import * as z from 'zod'
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 const newTransactionFormSchema = z.object ({
   description: z.string(),
   price: z.number(),
   category: z.string(),
-  // type: z.enum(['income', 'outcome'])
+  type: z.enum(['income', 'outcome'])
 })
 
 type newTransactionsFormInputs = z.infer<typeof newTransactionFormSchema>
@@ -19,6 +19,7 @@ type newTransactionsFormInputs = z.infer<typeof newTransactionFormSchema>
 export function NewTransactionModal() {
 
   const { 
+    control, 
     register, 
     handleSubmit,
     formState: { isSubmitting }
@@ -64,16 +65,27 @@ export function NewTransactionModal() {
             {...register('category')}
           />
 
-          <TransactionType>
-            <TransactionTypeButton variant='income' value='income' >
-              <ArrowCircleUp size={24} />
-              <span>Venda</span>
-            </TransactionTypeButton>
-            <TransactionTypeButton variant='outcome' value='outcome' >
-              <ArrowCircleDown size={24} />
-              <span>Compra</span>
-            </TransactionTypeButton>
-          </TransactionType>
+          <Controller 
+            control={control} 
+            name='type'
+            render={({ field }) => {
+              return (
+                <TransactionType 
+                  onValueChange={field.onChange} 
+                  value={field.value}
+                >
+                  <TransactionTypeButton variant='income' value='income' >
+                    <ArrowCircleUp size={24} />
+                    <span>Venda</span>
+                  </TransactionTypeButton>
+                  <TransactionTypeButton variant='outcome' value='outcome' >
+                    <ArrowCircleDown size={24} />
+                    <span>Compra</span>
+                  </TransactionTypeButton>
+                </TransactionType>
+              )
+            }}
+          />
 
           <button type='submit' disabled={isSubmitting}>
             Cadastrar
