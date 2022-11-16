@@ -13,16 +13,8 @@
       "description": "Ignite Rocketseat",
       "type": "outcome",
       "category": "Educação",
-      "price": 50,
+      "price": 1776,
       "createdAt": "2022-11-11T23:16:29.874Z"
-    },
-    {
-      "id": 3,
-      "description": "Livros",
-      "type": "income",
-      "category": "Educação",
-      "price": 3650,
-      "createdAt": "2022-11-13T19:27:22.968Z"
     },
     {
       "description": "Livros amazon",
@@ -31,6 +23,38 @@
       "type": "outcome",
       "createdAt": "2022-11-16T15:21:02.424Z",
       "id": 4
+    },
+    {
+      "description": "Cinema",
+      "price": 50,
+      "category": "Entretenimento",
+      "type": "outcome",
+      "createdAt": "2022-11-16T16:49:35.689Z",
+      "id": 5
+    },
+    {
+      "description": "Monetização YouTube",
+      "price": 3607,
+      "category": "Internet",
+      "type": "income",
+      "createdAt": "2022-11-16T16:51:22.479Z",
+      "id": 6
+    },
+    {
+      "description": "Rolê sábado",
+      "price": 45,
+      "category": "Entretenimento",
+      "type": "outcome",
+      "createdAt": "2022-11-16T17:16:55.859Z",
+      "id": 7
+    },
+    {
+      "description": "Compra atacado",
+      "price": 486,
+      "category": "Gastos fixos",
+      "type": "outcome",
+      "createdAt": "2022-11-16T18:56:23.344Z",
+      "id": 8
     }
   ]
 }
