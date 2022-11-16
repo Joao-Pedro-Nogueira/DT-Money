@@ -1,7 +1,7 @@
-import styled, { ThemeConsumer } from "styled-components";
+import styled from 'styled-components'
 
 export const HeaderBackground = styled.header`
-  background-color: ${props => props.theme["gray-900"]};
+  background-color: ${(props) => props.theme['gray-900']};
   height: 13.25rem;
   width: 100%;
 `

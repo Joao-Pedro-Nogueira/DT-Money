@@ -1,27 +1,25 @@
-import styled from "styled-components";
-
-
+import styled from 'styled-components'
 
 // Componente SerchForm
 
 export const SerachFormContainer = styled.form`
   display: flex;
   gap: 1rem;
-  
+
   input {
     flex: 1;
     border-radius: 6px;
-    border: 1px solid ${props => props.theme["gray-900"]};
-    background-color: ${props => props.theme["gray-900"]};
-    color: ${props => props.theme["gray-300"]};
+    border: 1px solid ${(props) => props.theme['gray-900']};
+    background-color: ${(props) => props.theme['gray-900']};
+    color: ${(props) => props.theme['gray-300']};
     padding: 1rem;
 
     &::placeholder {
-      color: ${props => props.theme["gray-500"]}
+      color: ${(props) => props.theme['gray-500']};
     }
 
     :focus {
-      border: 1px solid ${props => props.theme["green-300"]}
+      border: 1px solid ${(props) => props.theme['green-300']};
     }
   }
 `
@@ -31,10 +29,10 @@ export const SearchButton = styled.button`
   gap: 0.75rem;
   align-items: center;
 
-  border: 1px solid ${props => props.theme["green-300"]};
+  border: 1px solid ${(props) => props.theme['green-300']};
   padding: 1rem;
   background-color: transparent;
-  color: ${props => props.theme["green-300"]};
+  color: ${(props) => props.theme['green-300']};
   font-weight: bold;
   border-radius: 6px;
   line-height: 160%;
@@ -42,11 +40,10 @@ export const SearchButton = styled.button`
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s, border 0.2s;
 
-  
   &:not(:disabled):hover {
-    background-color: ${props => props.theme["green-500"]};
-    border: 1px solid ${props => props.theme["green-500"]};
-    color: ${props => props.theme["white"]};
+    background-color: ${(props) => props.theme['green-500']};
+    border: 1px solid ${(props) => props.theme['green-500']};
+    color: ${(props) => props.theme.white};
   }
 
   &:disabled {
@@ -54,7 +51,6 @@ export const SearchButton = styled.button`
     cursor: not-allowed;
   }
 `
-
 
 export const TransactionsTableContainer = styled.section`
   width: 100%;
@@ -68,32 +64,34 @@ export const TransactionsTable = styled.table`
   margin-top: 1.5rem;
 
   td {
-    background-color: ${props => props.theme["gray-700"]};
-    color: ${props => props.theme["gray-300"]};
+    background-color: ${(props) => props.theme['gray-700']};
+    color: ${(props) => props.theme['gray-300']};
     font-size: 1rem;
     line-height: 160%;
     padding: 1.25rem 2rem;
 
-    :first-child{
+    :first-child {
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
     }
 
-    :last-child{
+    :last-child {
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
     }
 
     :nth-child(2) {
-
     }
   }
 `
 
-interface PriceHighlightProps{
+interface PriceHighlightProps {
   variant: 'income' | 'outcome'
 }
 
 export const PriceHighlight = styled.span<PriceHighlightProps>`
-  color: ${props => props.variant === "income" ? props.theme["green-300"] : props.theme["red-300"]}
+  color: ${(props) =>
+    props.variant === 'income'
+      ? props.theme['green-300']
+      : props.theme['red-300']};
 `

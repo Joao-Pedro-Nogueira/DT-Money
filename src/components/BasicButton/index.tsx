@@ -1,13 +1,9 @@
-import { BasicButtonContainer } from "./styles";
+import { BasicButtonContainer } from './styles'
 
 interface BasicButtonProps {
-  content: string;
+  content: string
 }
 
-export function BasicButton({content}: BasicButtonProps) {
-  return (
-    <BasicButtonContainer>
-      {content}
-    </BasicButtonContainer>
-  )
+export function BasicButton({ content }: BasicButtonProps) {
+  return <BasicButtonContainer>{content}</BasicButtonContainer>
 }
