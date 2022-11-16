@@ -1,7 +1,7 @@
 {
   "transactions": [
     {
-      "Id": 1,
+      "id": 1,
       "description": "Desenvolvimento de site",
       "type": "income",
       "category": "venda",
@@ -9,7 +9,7 @@
       "createdAt": "2022-11-11T18:14:52.984Z"
     },
     {
-      "Id": 2,
+      "id": 2,
       "description": "Ignite Rocketseat",
       "type": "outcome",
       "category": "Educação",
@@ -17,12 +17,20 @@
       "createdAt": "2022-11-11T23:16:29.874Z"
     },
     {
-      "Id": 3,
+      "id": 3,
       "description": "Livros",
       "type": "income",
       "category": "Educação",
       "price": 3650,
       "createdAt": "2022-11-13T19:27:22.968Z"
+    },
+    {
+      "description": "Livros amazon",
+      "price": 125,
+      "category": "Educação",
+      "type": "outcome",
+      "createdAt": "2022-11-16T15:21:02.424Z",
+      "id": 4
     }
   ]
 }
