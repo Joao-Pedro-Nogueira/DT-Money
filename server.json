@@ -10,35 +10,19 @@
     },
     {
       "Id": 2,
-      "description": "Hambúrguer",
+      "description": "Ignite Rocketseat",
       "type": "outcome",
-      "category": "Alimentação",
+      "category": "Educação",
       "price": 50,
       "createdAt": "2022-11-11T23:16:29.874Z"
     },
     {
       "Id": 3,
-      "description": "Monetização YouTube",
+      "description": "Livros",
       "type": "income",
-      "category": "venda",
+      "category": "Educação",
       "price": 3650,
       "createdAt": "2022-11-13T19:27:22.968Z"
-    },
-    {
-      "Id": 4,
-      "description": "Compra do mês de novembro",
-      "type": "outcome",
-      "category": "Mercado",
-      "price": 342,
-      "createdAt": "2022-11-12T09:30:09.654Z"
-    },
-    {
-      "Id": 5,
-      "description": "Aluguel",
-      "type": "outcome",
-      "category": "Transporte",
-      "price": 2500,
-      "createdAt": "2022-11-11T23:16:29.874Z"
     }
   ]
 }

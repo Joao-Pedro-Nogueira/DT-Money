@@ -6,6 +6,7 @@ import * as RadioGroup from '@radix-ui/react-radio-group';
 import * as z from 'zod'
 import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { api } from '../../lib/axios';
 
 const newTransactionFormSchema = z.object ({
   description: z.string(),
@@ -28,9 +29,15 @@ export function NewTransactionModal() {
   })
 
   async function handleCreateNewTransaction(data: newTransactionsFormInputs) {
-
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    console.log(data)
+    const { description, price, type, category } = data
+    
+    await api.post('transactions', {
+      description,
+      price,
+      category,
+      type,
+      createdAt: new Date()
+    })
   }
 
   const theme = useTheme()
